@@ -1,0 +1,20 @@
+{
+  "name": "dynamodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db": "serverless dynamodb start --migrate",
+    "shell": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^12.0.4"
+  },
+  "dependencies": {
+    "dynamodb-admin": "^4.5.0",
+    "serverless-dynamodb-local": "^0.2.40"
+  }
+}

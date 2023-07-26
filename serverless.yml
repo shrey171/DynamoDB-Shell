@@ -1,0 +1,22 @@
+service: dynamo
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ap-south-1
+  timeout: 100
+  lambdaHashingVersion: 20201221
+
+custom:
+  dynamodb:
+    stages:
+      - dev
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true
+
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
